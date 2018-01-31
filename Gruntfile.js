@@ -1,15 +1,5 @@
 module.exports = function (grunt) {
   grunt.initConfig({
-    "angular-builder": {
-      options: {
-        mainModule: "Routes",
-        externalModules: ["ngRoute"]
-      },
-      app: {
-        src: "./app/**/*.js",
-        dest: "./dist/bundle.js"
-      }
-    },
     jshint: {
       options: {
         predef: ["document", "console", "firebase"],
@@ -22,7 +12,7 @@ module.exports = function (grunt) {
     sass: {
       dist: {
         files: {
-          "./css/main.css": "./sass/main.scss"
+          "./styles/css/main.css": "./styles/sass/main.scss"
         }
       }
     },
@@ -32,7 +22,7 @@ module.exports = function (grunt) {
         tasks: ["jshint", "angular-builder"]
       },
       sass: {
-        files: ["./sass/**/*.scss"],
+        files: ["./styles/sass/**/*.scss"],
         tasks: ["sass"]
       }
     }
@@ -42,4 +32,5 @@ module.exports = function (grunt) {
     .filterDev("grunt-*")
     .forEach(grunt.loadNpmTasks);
 
-  grunt.registerTask("default", ["jshint", "sass", "angular-builder", "watch"]);
+  grunt.registerTask("default", ["jshint", "sass", "watch"]);
+}
