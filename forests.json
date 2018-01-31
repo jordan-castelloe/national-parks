@@ -1,49 +1,39 @@
+
 {
   "forests": [
     {
-      "name": "city",
-      "description": "Paris on $10 a Day",
-      "price": 18.99
+      "name": "Allegheny",
+      "description": "Pennsylvania’s only National Forest includes Kinzua Dam and Allegheny Reservoir on the Allegheny Plateau in the northwestern part of the state. The forest contains the largest tract of remaining old-growth forest in Pennsylvania at Tionesta Scenic and Research Natural Areas and 10 mi (16 km) of the North Country Trail.",
+      "location": "Pennsylvania"
     },
     {
-      "type": "city",
-      "title": "Venice: Canals and Stuff",
-      "price": 14.50
+      "name": "Angeles",
+      "description": "Located in the San Gabriel Mountains at the edge of the Los Angeles metro area, this National Forest includes five wilderness areas. While much of the forest is dense chaparral, elevations in the forest range from 1,200 feet (370 m) to 10,064 feet (3,068 m) at the summit of Mount San Antonio.",
+      "location": "California"
     },
     {
-      "type": "city",
-      "title": "Visiting Hoboken: Why?",
-      "price": 1.25
+      "name": "Angelina",
+      "description": "Primarily longleaf, loblolly, and shortleaf pine, the forest includes two wilderness areas and borders the Sam Rayburn Reservoir. The forest provides habitat for the endangered red-cockaded woodpecker and wintering habitat for bald eagles.",
+      "location": "Texas"
     },
     {
-      "type": "country",
-      "title": "Touring Brazil's Empty Olympic Stadiums",
-      "price": 13.50
+      "name": "Apache-Sitgreaves",
+      "description": "Encompassing the Mogollon Rim and White Mountains, this forest includes 34 lakes and over 680 miles (1,090 km) of rivers and streams, more than any other National Forest in the arid Southwest.[13]",
+      "location": "Arizona, New Mexico"
     },
     {
-      "type": "country",
-      "title": "'Murica: Only Commies Travel Abroad",
-      "price": 20.00
+      "name": "Apalachicola",
+      "description": "As the largest National Forest in Florida, Apalachicola includes over 2,700 acres (1,100 ha) of water and 67 mi (108 km) of the Florida Trail. There are caverns and sinkholes at the Leon Sinks Geological Area, while Fort Gadsden is along the Apalachicola River.",
+      "location": "Florida"
     },
     {
-      "type": "country",
-      "title": "Australia: Every Animal Here Can Kill You",
-      "price": 18.00
-    },
-    {
-      "type": "region",
-      "title": "Backpacking Europe on Two Showers a Week",
-      "price": 12.48
-    },
-    {
-      "type": "region",
-      "title": "Rainforests of Cental America",
-      "price": 15.00
-    },
-    {
-      "type": "region",
-      "title": "The Evil Genius Guide to Taking over the Tri City Area",
-      "price": 13.49
+      "name": "Arapaho",
+      "description": "Arapaho National Forest is in the high Rockies and includes six wilderness areas. It is currently managed jointly with Roosevelt National Forest and Pawnee National Grassland. The highest paved road in North America ascends Mount Evans at an elevation of 14,265 ft (4,348 m).[15]",
+      "location": "Texas"
     }
+  ],
+  "visitors": [
+  ],
+  "favorites": [
   ]
 }

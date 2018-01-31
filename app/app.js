@@ -6,6 +6,8 @@
 //   / forest /: id
 angular
   .module("NationalParks", ["ngRoute"])
+  .constant("FBUrl", "https://todo-app-42851.firebaseio.com/" // I reused my todo app database for this project so it's still called the todo app but it's the right data, I promise
+)
   .config($routeProvider => {
     $routeProvider
       .when("/register", {
@@ -30,4 +32,12 @@ angular
         controller: "ForestFavoritesCtrl",
       })
       .otherwise("/login");
+  })
+  .run(FBCreds => {
+    let creds = FBCreds;
+    let authConfig = {
+      apiKey: creds.key,
+      authDomain: creds.authDomain
+    };
+    firebase.initializeApp(authConfig);
   });
