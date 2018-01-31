@@ -19,7 +19,7 @@ angular
       })
       .when("/forests/favorites", {
         templateUrl: "partials/forest-list.html",
-        controller: "FavoriteForestsCtrl",
+        controller: "ForestFavoritesCtrl",
       })
       .otherwise("/login");
   });
