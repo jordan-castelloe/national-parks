@@ -22,6 +22,4 @@ angular.module("NationalParks").controller("NavCtrl", function ($scope, $locatio
       url: "#!/forests/favorites"
     }
   ];
-
-  console.log($scope.navItems);
 });

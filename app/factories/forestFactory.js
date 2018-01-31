@@ -15,5 +15,16 @@ angular.module("NationalParks").factory("ForestFactory", (FBUrl, $http, $q) => {
     });
   }
 
-  return {getForests};
+  // grab single forest by id
+  function getSingleForest(id) {
+    return $q((resolve, reject) => {
+      $http.get(`${FBUrl}/forests/${id}.json`)
+      .then(({data}) => {
+        resolve(data);
+      });
+    });
+  }
+
+
+  return {getForests, getSingleForest};
 });
