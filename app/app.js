@@ -31,7 +31,7 @@ angular
         templateUrl: "partials/forest-details.html",
         controller: "ForestDetailsCtrl",
       })
-      .otherwise("/register");
+      .otherwise("/forests");
   })
   .run(FBCreds => {
     let authConfig = {
