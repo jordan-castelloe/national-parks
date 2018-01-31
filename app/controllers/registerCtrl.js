@@ -1,4 +1,6 @@
 'use strict';
-angular.module("NationalParks").controller("RegisterCtrl", function ($scope) {
-  $scope.test = "This is the register controller!";
+angular.module("NationalParks").controller("RegisterCtrl", function ($scope, AuthFactory) {
+  $scope.submitUserInfo  = () => {
+    AuthFactory.createUser($scope.user);
+  };
 });

@@ -31,13 +31,12 @@ angular
         templateUrl: "partials/forest-list.html",
         controller: "ForestFavoritesCtrl",
       })
-      .otherwise("/login");
+      .otherwise("/register");
   })
   .run(FBCreds => {
-    let creds = FBCreds;
     let authConfig = {
-      apiKey: creds.key,
-      authDomain: creds.authDomain
+      apiKey: FBCreds.key,
+      authDomain: FBCreds.authDomain
     };
     firebase.initializeApp(authConfig);
   });
