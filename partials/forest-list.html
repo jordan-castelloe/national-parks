@@ -6,6 +6,6 @@
     <p>{{forest.description}}</p>
     <p>{{forest.location}}</p>
     <button><a href = "#!/forests/{{forest.id}}">View Details</a></button>
-    <button>Favorite</button>
+    <button ng-click = "addToFavorites(forest.id)">Favorite</button>
   </div>
 </div>

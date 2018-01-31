@@ -15,6 +15,9 @@
 </head>
 <body ng-app = "NationalParks">
   <h1>National Parks</h1>
+
+  <div ng-include=" 'partials/navbar.html' "></div>
+
   <div ng-view></div>
   
   <!-- app setup -->
@@ -31,6 +34,7 @@
   <script src='app/controllers/loginCtrl.js'></script>
   <script src='app/controllers/registerCtrl.js'></script>
   <script src='app/controllers/forestFavesCtrl.js'></script>
+  <script src='app/controllers/navCtrl.js'></script>
   
 </body>
 </html>
