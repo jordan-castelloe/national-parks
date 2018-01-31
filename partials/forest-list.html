@@ -3,7 +3,6 @@
 <div class = "card-container">
   <div class = "card" ng-repeat = "forest in forestList">
     <h3>{{forest.name}}</h3>
-    <p>{{forest.description}}</p>
     <p>{{forest.location}}</p>
     <button><a href = "#!/forests/{{forest.id}}">View Details</a></button>
     <button ng-click = "addToFavorites(forest.id)">Favorite</button>
