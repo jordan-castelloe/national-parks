@@ -1,6 +1,6 @@
 'use strict';
 angular.module("NationalParks").controller("ForestListCtrl", function ($scope, ForestFactory) {
-  $scope.test = "This is the forest list controller!";
+  $scope.title = "National Forests";
 
   const createFavorite = (uid, forestId) => {
     const favoriteObj = { uid, forestId };
@@ -8,7 +8,6 @@ angular.module("NationalParks").controller("ForestListCtrl", function ($scope, F
   };
 
   $scope.addToFavorites = (forestId) => {
-    console.log("this should be a forest id", forestId);
     const uid = firebase.auth().currentUser.uid;
     if (uid !== null){
       createFavorite(uid, forestId);
