@@ -1,5 +1,5 @@
 # National Parks Exercise for NSS
-This is an exercise to practice Firebase user authentication with Angular. This assignment is <strong>incomplete</strong>.
+This is an exercise to practice Firebase user authentication with Angular.
 ### Instructions to run: 
 ```
 git clone
