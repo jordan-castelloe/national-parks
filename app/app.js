@@ -23,13 +23,13 @@ angular
         controller: "ForestListCtrl",
         
       })
-      .when("/forests/:id", {
-        templateUrl: "partials/forest-details.html",
-        controller: "ForestDetailsCtrl",
-      })
       .when("/forests/favorites", {
         templateUrl: "partials/forest-list.html",
         controller: "ForestFavoritesCtrl",
+      })
+      .when("/forests/:id", {
+        templateUrl: "partials/forest-details.html",
+        controller: "ForestDetailsCtrl",
       })
       .otherwise("/register");
   })

@@ -35,6 +35,17 @@ angular.module("NationalParks").factory("ForestFactory", (FBUrl, $http, $q) => {
     });
   }
 
+  // get favorites from a user's collection
+  function getFavorites(uid) {
+    return $q((resolve, reject) => {
+      $http.get(`${FBUrl}/favorites.json?orderBy="uid"&equalTo="${uid}"`)
+        .then(({ data }) => {
+          console.log("this is what you get back from the request for a user's faves", data);
+          resolve(data);
+        });
+    });
+  }
 
-  return {getForests, getSingleForest, addFavorite};
+
+  return {getForests, getSingleForest, addFavorite, getFavorites};
 });
