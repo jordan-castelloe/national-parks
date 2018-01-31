@@ -3,10 +3,15 @@ angular.module("NationalParks").controller("RegisterCtrl", function ($scope, Aut
   $scope.title = "Sign Up";
   $scope.buttonText = "I already have an account!";
 
+  // called on "I already have an account!" button click
+  // navigates to login screen
   $scope.switchViews = () => {
     $window.location.href = "#!/login";
   };
 
+  // creates new user 
+  // logs user in
+  // navigates to forest page
   $scope.submitUserInfo  = () => {
     AuthFactory.createUser($scope.user)
     .then (() => {

@@ -16,26 +16,5 @@ angular.module("NationalParks").factory("AuthFactory", (FBCreds, $q) => {
     return firebase.auth().signOut();
   };
 
-  authObj.isAuthenticated = () => {
-    console.log("isAuthenticated called AuthFactory");
-    return $q((resolve, reject) => {
-      console.log("firing onAuthStateChanged");
-      firebase.auth().onAuthStateChanged((user) => {
-        console.log("onAuthStateChanged finished");
-        if (user) {
-          console.log("user", user);
-          currentUser = user.uid;
-          resolve(true);
-        } else {
-          resolve(false);
-        }
-      });
-    });
-  };
-
-  authObj.getCurrentUser = () => {
-    return currentUser;
-  };
-
   return authObj;
 });

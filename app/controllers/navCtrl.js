@@ -1,18 +1,12 @@
 'use strict';
 
 angular.module("NationalParks").controller("NavCtrl", function ($scope, $location, $window, AuthFactory) {
-  // $scope.isActive = (viewLocation) => viewLocation === $location.path();
 
   $scope.navItems= [
     {
       name: "Logout",
       url: "#!/logout"
     },
-    // {
-    //   name: "Login",
-    //   url: "#!/login",
-    //   bang: "!"
-    // },
     {
       name: "Forests",
       url: "#!/forests"
@@ -23,6 +17,7 @@ angular.module("NationalParks").controller("NavCtrl", function ($scope, $locatio
     }
   ];
 
+  //hides the login button once the user is logged in
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       $scope.$apply($scope.isLoggedIn = true);
@@ -33,6 +28,8 @@ angular.module("NationalParks").controller("NavCtrl", function ($scope, $locatio
     }
   });
 
+  // navigates to the appropriate url
+  // logs user out
   $scope.navigate = navUrl => {
     if (navUrl === "#!/logout") {
       AuthFactory.logoutUser();

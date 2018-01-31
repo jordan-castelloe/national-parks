@@ -1,9 +1,5 @@
 'use strict';
-// /register
-//   / login
-//   / forests
-//   / forests / favorite
-//   / forest /: id
+
 angular
   .module("NationalParks", ["ngRoute"])
   .constant("FBUrl", "https://todo-app-42851.firebaseio.com" // I reused my todo app database for this project so it's still called the todo app but it's the right data, I promise
