@@ -9,6 +9,8 @@ angular.module("NationalParks").controller("ForestFavoritesCtrl", function ($sco
     for (let fave in favorites){
       ForestFactory.getSingleForest(favorites[fave].forestId)
       .then (forest => {
+        forest.id = favorites[fave].forestId;
+        console.log("this should have an id", forest);
         faves.push(forest); // once you have the individual forest, push it into the empty array
       });
       $scope.forestList = faves; // set the array of favorited forests on the scope variable
