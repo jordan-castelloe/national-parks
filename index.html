@@ -4,24 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- angular modules -->
   <script src="node_modules/angular/angular.min.js"></script>
   <script src="node_modules/angular-route/angular-route.min.js"></script>
+  <!-- firebase module -->
+  <script src="node_modules/firebase/firebase.js"></script>
+  
   <link rel="stylesheet" href="styles/css/main.css">
   <title>National Parks</title>
 </head>
 <body ng-app = "NationalParks">
   <h1>National Parks</h1>
+
+  <div ng-include=" 'partials/navbar.html' "></div>
+
   <div ng-view></div>
   
   <!-- app setup -->
   <script src='app/app.js'></script>
+  <script src = 'app/values/fb-creds.js'></script>
+
   <!-- factories -->
+  <script src='app/factories/authFactory.js'></script>
+  <script src='app/factories/forestFactory.js'></script>
 
   <!-- controllers -->
   <script src='app/controllers/forestDetailsCtrl.js'></script>
   <script src='app/controllers/forestListCtrl.js'></script>
   <script src='app/controllers/loginCtrl.js'></script>
+  <script src='app/controllers/registerCtrl.js'></script>
   <script src='app/controllers/forestFavesCtrl.js'></script>
+  <script src='app/controllers/navCtrl.js'></script>
   
 </body>
 </html>
