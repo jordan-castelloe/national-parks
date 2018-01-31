@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module("NationalParks").controller("ForestDetailsCtrl", function ($scope, $routeParams, ForestFactory) {
-  $scope.test = "This is the forest details controller!";
+  $scope.title = "More about this forest";
 
   ForestFactory.getSingleForest($routeParams.id)
   .then (forest => {

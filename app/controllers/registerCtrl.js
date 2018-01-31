@@ -1,7 +1,7 @@
 'use strict';
 angular.module("NationalParks").controller("RegisterCtrl", function ($scope, AuthFactory, $window) {
   $scope.title = "Sign Up";
-  $scope.buttonText = "I already have an account!!";
+  $scope.buttonText = "I already have an account!";
 
   $scope.switchViews = () => {
     $window.location.href = "#!/login";
@@ -10,10 +10,10 @@ angular.module("NationalParks").controller("RegisterCtrl", function ($scope, Aut
   $scope.submitUserInfo  = () => {
     AuthFactory.createUser($scope.user)
     .then (() => {
-     return  AuthFactory.loginUser($scope.user)
-    })
-    .then (() => {
-      $window.location.href = "#!/forests";
+     AuthFactory.loginUser($scope.user)
+      .then (() => {
+        $window.location.href = "#!/forests";
+      });
     });
   };
 });
