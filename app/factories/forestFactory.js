@@ -40,7 +40,6 @@ angular.module("NationalParks").factory("ForestFactory", (FBUrl, $http, $q) => {
     return $q((resolve, reject) => {
       $http.get(`${FBUrl}/favorites.json?orderBy="uid"&equalTo="${uid}"`)
         .then(({ data }) => {
-          console.log("this is what you get back from the request for a user's faves", data);
           resolve(data);
         });
     });
