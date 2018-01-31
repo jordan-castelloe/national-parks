@@ -25,6 +25,16 @@ angular.module("NationalParks").factory("ForestFactory", (FBUrl, $http, $q) => {
     });
   }
 
+  // add a forest to the user's collections
+  function addFavorite(favoriteObj) {
+    return $q((resolve, reject) => {
+      $http.post(`${FBUrl}/favorites.json`, JSON.stringify(favoriteObj))
+      .then(({data}) => {
+        resolve(data);
+      });
+    });
+  }
 
-  return {getForests, getSingleForest};
+
+  return {getForests, getSingleForest, addFavorite};
 });
