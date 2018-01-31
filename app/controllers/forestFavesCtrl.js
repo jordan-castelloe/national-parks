@@ -18,6 +18,10 @@ angular.module("NationalParks").controller("ForestFavoritesCtrl", function ($sco
       });
   };
 
+  $scope.onFavoritesPage = () => {
+    return true;
+  };
+
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
       const uid = user.uid; 

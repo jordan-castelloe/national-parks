@@ -6,6 +6,6 @@
     <h3>{{forest.name}}</h3>
     <p>{{forest.location}}</p>
     <button><a href = "#!/forests/{{forest.id}}">View Details</a></button>
-    <button ng-click = "addToFavorites(forest.id)">Favorite</button>
+    <button ng-hide = "onFavoritesPage()" ng-click = "addToFavorites(forest.id)">Favorite</button>
   </div>
 </div>
