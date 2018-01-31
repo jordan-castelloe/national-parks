@@ -6,9 +6,9 @@ angular.module("NationalParks").factory("ForestFactory", (FBUrl, $http, $q) => {
   function getForests() {
     return $q((resolve, reject) => {
       $http.get(`${FBUrl}/forests.json`)
-      .then(({ forestData }) => {
-        console.log("this should be all the forests from inside the promise", forestData);
-        resolve(forestData);
+      .then(({data}) => {
+        console.log("this should be all the forests from inside the promise", data);
+        resolve(data);
       });
     });
   }
