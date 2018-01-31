@@ -7,7 +7,9 @@ angular.module("NationalParks").factory("ForestFactory", (FBUrl, $http, $q) => {
     return $q((resolve, reject) => {
       $http.get(`${FBUrl}/forests.json`)
       .then(({data}) => {
-        console.log("this should be all the forests from inside the promise", data);
+        data.map((forest, index) => {
+          forest.id = index; // data returns as an array of anonymous objects, so I add an id of each items array index
+        });
         resolve(data);
       });
     });
